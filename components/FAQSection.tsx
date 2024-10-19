@@ -258,7 +258,7 @@ const FAQSection = () => {
           FAQ
         </h3>
         <p className="hidden text-balance text-2xl font-medium text-neutral-950 md:mb-9 md:mt-4 md:block">
-          Let’s help you with some of your frequently asked questions.
+          Let&apos;s help you with some of your frequently asked questions.
         </p>
       </header>
 
