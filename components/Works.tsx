@@ -51,9 +51,7 @@ const Works: React.FC = () => {
               style={{
                 perspective: '400px',
                 transform: `perspective(400px) rotateX(var(--x)) rotateY(var(--y))`,
-                transitionDuration: "50ms",
-                "--x": "0deg" as string, // Default value for rotation
-                "--y": "0deg" as string, // Default value for rotation
+                transitionDuration: '50ms',
               }}
             >
               {/* Image container */}
