@@ -24,14 +24,14 @@ const Works: React.FC = () => {
     const y = -(deltaX / card.width) * 10; // Adjust rotation sensitivity
 
     // Set CSS variables for rotation
-    e.currentTarget.style.setProperty("--x" as any, `${x}deg`); // Use 'as any' to bypass type-checking
-    e.currentTarget.style.setProperty("--y" as any, `${y}deg`); // Use 'as any' to bypass type-checking
+    e.currentTarget.style.setProperty("--x" as string, `${x}deg`); // Use 'as any' to bypass type-checking
+    e.currentTarget.style.setProperty("--y" as string, `${y}deg`); // Use 'as any' to bypass type-checking
   };
 
   // Reset rotation on mouse leave
   const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    e.currentTarget.style.setProperty("--x" as any, "0deg"); // Use 'as any'
-    e.currentTarget.style.setProperty("--y" as any, "0deg"); // Use 'as any'
+    e.currentTarget.style.setProperty("--x" as string, "0deg"); // Use 'as any'
+    e.currentTarget.style.setProperty("--y" as string, "0deg"); // Use 'as any'
   };
 
   return (
@@ -52,9 +52,8 @@ const Works: React.FC = () => {
                 perspective: '400px',
                 transform: `perspective(400px) rotateX(var(--x)) rotateY(var(--y))`,
                 transitionDuration: "50ms",
-                // Using 'any' type assertion to avoid TypeScript error
-                "--x": "0deg" as any, // Default value for rotation
-                "--y": "0deg" as any, // Default value for rotation
+                "--x": "0deg" as string, // Default value for rotation
+                "--y": "0deg" as string, // Default value for rotation
               }}
             >
               {/* Image container */}
